@@ -18,7 +18,7 @@
     <header>
         {#if !$adminUser}
         <nav>
-            <h1>Planu</h1>
+            <h1>Connexio</h1>
             <Link to='/'>
                 <span class='link-content'>Home</span>
             </Link>
@@ -28,7 +28,7 @@
         </nav>
         {:else}
         <nav>
-            <h1>Planu</h1>
+            <h1>Connexio</h1>
             <button on:click={handleLogout} class='exit-button'>
                 Sair
             </button>
