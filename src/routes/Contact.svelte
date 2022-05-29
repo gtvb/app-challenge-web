@@ -149,4 +149,10 @@ async function handleSubmit() {
 .wrapper form button:hover {
     cursor: pointer;
 }
+
+@media (max-width: 680px) {
+    .wrapper form {
+        width: 80%;
+    }
+}
 </style>
