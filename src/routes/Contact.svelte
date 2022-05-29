@@ -107,7 +107,7 @@ async function handleSubmit() {
 
 .wrapper form {
     height: 70%;
-    width: 30%;
+    width: 35%;
 
     padding: 15px 0;
 
