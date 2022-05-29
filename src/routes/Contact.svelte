@@ -17,7 +17,7 @@ let state = '';
 let city = '';
 
 onMount(async () => {
-    let res = await axios.get('https://servicodados.ibge.gov.br/api/v1/localidades/estados?orderBy=nome');
+    let res = await axios.get(`${import.meta.env.VITE_IBGE_URL}/localidades/estados?orderBy=nome`);
     let data = res.data;
 
     data.forEach(s => { 
@@ -32,7 +32,7 @@ onMount(async () => {
 
 async function getCities() {
     if(!state) return
-    let res = await axios.get(`https://servicodados.ibge.gov.br/api/v1/localidades/estados/${state}/municipios`);
+    let res = await axios.get(`${import.meta.env.VITE_IBGE_URL}/localidades/estados/${state}/municipios`);
     let data = res.data;
     data.forEach(s => { 
         let newCity = {
@@ -58,7 +58,7 @@ async function handleSubmit() {
         "plan_id": planId,
         "installer_id": installerId,
     }
-    await axios.post('http://localhost:8080/request_installer', JSON.stringify(body));
+    await axios.post(`${import.meta.env.VITE_SERVER_URL}/request_installer`, JSON.stringify(body));
     name = '';
     email = '';
     state = '';

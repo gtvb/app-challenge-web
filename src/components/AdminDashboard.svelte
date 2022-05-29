@@ -12,7 +12,7 @@ let installerId = info[1];
 let requests = [];
 
 onMount(async () => {
-    let res = await axios.get(`http://localhost:8080/installer_requests/${planId}/${installerId}`)
+    let res = await axios.get(`${import.meta.env.VITE_SERVER_URL}/installer_requests/${planId}/${installerId}`)
     requests = [...requests, ...res.data];
 })
 
