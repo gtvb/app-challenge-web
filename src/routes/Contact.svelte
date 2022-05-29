@@ -15,6 +15,7 @@ let name = '';
 let email = '';
 let state = '';
 let city = '';
+let submitted = false;
 
 onMount(async () => {
     let res = await axios.get(`${import.meta.env.VITE_IBGE_URL}/localidades/estados?orderBy=nome`);
@@ -63,30 +64,35 @@ async function handleSubmit() {
     email = '';
     state = '';
     city = '';
+    submitted = true;
 }
 </script>
 
 <div class='wrapper'>
-    <form on:submit|preventDefault={handleSubmit}>
-        <h2>Requisitar Instalador</h2>
-        <input bind:value={name} type='email' placeholder='Email' />
-        <input bind:value={email} type='text' placeholder='Nome Completo' />
-        <select bind:value={state}>
-            {#each states as state} 
-                <option value={state.tag}>{state.tag}</option>
-            {/each}
-        </select>
+    {#if !submitted}
+        <form on:submit|preventDefault={handleSubmit}>
+            <h2>Requisitar Instalador</h2>
+            <input bind:value={name} type='email' placeholder='Email' />
+            <input bind:value={email} type='text' placeholder='Nome Completo' />
+            <select bind:value={state}>
+                {#each states as state} 
+                    <option value={state.tag}>{state.tag}</option>
+                {/each}
+            </select>
 
-        {#if state}
-        <select bind:value={city}>
-            {#each cities as city} 
-                <option value={city.name}>{city.name}</option>
-            {/each}
-        </select>
-        {/if}
+            {#if state}
+            <select bind:value={city}>
+                {#each cities as city} 
+                    <option value={city.name}>{city.name}</option>
+                {/each}
+            </select>
+            {/if}
 
-        <button type='submit'>Enviar</button>
-    </form>
+            <button type='submit'>Enviar</button>
+        </form>
+    {:else}
+        <p>Tudo Certo! Agora é só aguardar esse instalador entrar em contato com o seu email para mais informações.<p>
+    {/if}
 </div>
 
 <style>
