@@ -23,7 +23,7 @@
                 <span class='link-content'>Home</span>
             </Link>
             <Link to='/admin_login'>
-                <span class='link-content'>Admin</span>
+                <span class='link-content'>Entre como Instalador</span>
             </Link>
         </nav>
         {:else}

@@ -25,7 +25,7 @@ function handleSubmit() {
 
 <div class='wrapper'>
     <form on:submit|preventDefault={handleSubmit}>
-        <h2>Entre como Admin</h2>
+        <h2>Entre como Instalador</h2>
         <input bind:value={planId} type='number' placeholder='Id do plano' />
         <input bind:value={installerId} type='number' placeholder='Id do instalador' />
         <input bind:value={password} type='password' placeholder='Senha' />

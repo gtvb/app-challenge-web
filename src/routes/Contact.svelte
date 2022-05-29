@@ -78,14 +78,14 @@ async function handleSubmit() {
             <h2>Requisitar Instalador</h2>
             <input bind:value={name} type='email' placeholder='Email' />
             <input bind:value={email} type='text' placeholder='Nome Completo' />
-            <select bind:value={state}>
+            <select bind:value={state} placeholder='Estado'>
                 {#each states as state} 
                     <option value={state.tag}>{state.tag}</option>
                 {/each}
             </select>
 
             {#if state}
-            <select bind:value={city}>
+            <select bind:value={city} placeholder='Cidade'>
                 {#each cities as city} 
                     <option value={city.name}>{city.name}</option>
                 {/each}
