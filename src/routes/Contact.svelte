@@ -68,6 +68,10 @@ async function handleSubmit() {
 }
 </script>
 
+<svelte:head>
+    <title>Requisitar Instalador</title>
+</svelte:head>
+
 <div class='wrapper'>
     {#if !submitted}
         <form on:submit|preventDefault={handleSubmit}>

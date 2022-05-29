@@ -17,6 +17,10 @@ onMount(async () => {
 })
 </script>
 
+<svelte:head>
+    <title>Home</title>
+</svelte:head>
+
 <div class='wrapper'>
     {#if plans}
         <section>

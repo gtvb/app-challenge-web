@@ -19,6 +19,10 @@ function handleSubmit() {
 }
 </script>
 
+<svelte:head>
+    <title>Entrar</title>
+</svelte:head>
+
 <div class='wrapper'>
     <form on:submit|preventDefault={handleSubmit}>
         <h2>Entre como Admin</h2>

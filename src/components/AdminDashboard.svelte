@@ -28,6 +28,10 @@ channel.bind(`event_${installerId}`, (data) => {
 });
 </script>
 
+<svelte:head>
+    <title>Admin</title>
+</svelte:head>
+
 <div class='wrapper'>
     {#if requests.length == 0}
         <p class='ops'>Ops! Você não possui nenhuma requisição de instalação</p>

@@ -27,6 +27,10 @@ onMount(async () => {
 })
 </script>
 
+<svelte:head>
+    <title>Detalhes do plano</title>
+</svelte:head>
+
 <div class='wrapper'>
     {#if installers}
         <div class='installers-wrapper'>
