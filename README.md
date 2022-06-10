@@ -1,7 +1,5 @@
 # Connexio Web 💻
 
-[Acesse a aplicação](https://app-challenge-web.vercel.app)
-
 O repositório contém todo o código da aplicação web entitulada Connexio. Este foi um projeto desenvolvido durante o Inatel App Challenge do ano de 2022, onde o tema proposto foi "Uber para procura de provedores de internet".
 
 ## Detalhes Técnicos
